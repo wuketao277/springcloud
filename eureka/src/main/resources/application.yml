@@ -20,20 +20,54 @@ eureka:
 
 ---
 spring.profiles: s1
+spring:
+  application:
+    name: eureka-1
 server:
   port: 81
 eureka:
   instance:
-    hostname: eurekaServer1
+    hostname: localhost
   client:
-    service-url.defaultZone: http://eurekaServer2:82/eureka/
+    #是否向服务注册中心注册自己
+#    register-with-eureka: true
+#    #是否检索服务
+#    fetch-registry: true
+    #将当前eureka实例注册到另外一个eureka实例中
+#    service-url.defaultZone: http://localhost:82/eureka/
 
 ---
 spring.profiles: s2
+spring:
+  application:
+    name: eureka-2
 server:
   port: 82
 eureka:
   instance:
-    hostname: eurekaServer2
+    hostname: localhost
   client:
-    service-url.defaultZone: http://eurekaServer1:81/eureka/
+    #是否向服务注册中心注册自己
+    register-with-eureka: true
+    #是否检索服务
+    fetch-registry: true
+    #将当前eureka实例注册到另外一个eureka实例中
+    service-url.defaultZone: http://localhost:81/eureka/
+
+---
+spring.profiles: s3
+spring:
+  application:
+    name: eureka-3
+server:
+  port: 83
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否向服务注册中心注册自己
+    register-with-eureka: true
+    #是否检索服务
+    fetch-registry: true
+    #将当前eureka实例注册到另外一个eureka实例中
+    service-url.defaultZone: http://localhost:82/eureka/
