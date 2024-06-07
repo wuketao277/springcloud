@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: OrderService
+server:
+  port: 8081
+# Eureka服务注册中心
+eureka:
+  client:
+    #服务注册中心的配置内容，指定服务注册中心的位置
+    service-url.defaultZone: http://localhost:81/eureka/
+
+---
+spring.profiles: s1
+spring:
+  application:
+    name: OrderService
+server:
+  port: 8081
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #将当前eureka实例注册到另外一个eureka实例中
+    service-url.defaultZone: http://localhost:81/eureka/
+
+---
+spring.profiles: s2
+spring:
+  application:
+    name: OrderService
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #将当前eureka实例注册到另外一个eureka实例中
+    service-url.defaultZone: http://localhost:81/eureka/
+
+---
+spring.profiles: s3
+spring:
+  application:
+    name: OrderService
+server:
+  port: 8083
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #将当前eureka实例注册到另外一个eureka实例中
+    service-url.defaultZone: http://localhost:81/eureka/

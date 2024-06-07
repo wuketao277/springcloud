@@ -2,7 +2,7 @@ spring:
   application:
     name: eureka
 server:
-  port: 80
+  port: 81
 # 服务注册中心实例的主机名
 eureka:
   instance:

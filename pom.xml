@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>eureka</module>
+        <module>OrderService</module>
     </modules>
 
     <parent>
