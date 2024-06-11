@@ -30,9 +30,9 @@ eureka:
     hostname: localhost
   client:
     #是否向服务注册中心注册自己
-#    register-with-eureka: true
+    register-with-eureka: true
 #    #是否检索服务
-#    fetch-registry: true
+    fetch-registry: true
     #将当前eureka实例注册到另外一个eureka实例中
 #    service-url.defaultZone: http://localhost:82/eureka/
 

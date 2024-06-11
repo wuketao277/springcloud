@@ -1,8 +1,8 @@
 spring:
   application:
-    name: Order
+    name: Storage
 server:
-  port: 8081
+  port: 8091
 # Eureka服务注册中心
 eureka:
   client:
@@ -13,40 +13,40 @@ eureka:
 spring.profiles: s1
 spring:
   application:
-    name: Order
+    name: Storage
 server:
-  port: 8081
+  port: 8091
 eureka:
   instance:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:81/eureka/
+    service-url.defaultZone: http://localhost:83/eureka/
 
 ---
 spring.profiles: s2
 spring:
   application:
-    name: Order
+    name: Storage
 server:
-  port: 8082
+  port: 8092
 eureka:
   instance:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:81/eureka/
+    service-url.defaultZone: http://localhost:83/eureka/
 
 ---
 spring.profiles: s3
 spring:
   application:
-    name: Order
+    name: Storage
 server:
-  port: 8083
+  port: 8093
 eureka:
   instance:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:81/eureka/
+    service-url.defaultZone: http://localhost:83/eureka/

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka" />
         <module name="OrderService" />
+        <module name="storageservice" />
       </profile>
     </annotationProcessing>
   </component>

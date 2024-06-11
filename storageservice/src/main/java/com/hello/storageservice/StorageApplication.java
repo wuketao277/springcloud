@@ -1,8 +1,9 @@
-package com.hello.orderservice;
+package com.hello.storageservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
@@ -10,11 +11,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date 2024/6/7
  * @Description
  */
-@EnableDiscoveryClient
-@EnableSwagger2
 @SpringBootApplication
-public class OrderService {
+@EnableDiscoveryClient
+@EnableFeignClients
+@EnableSwagger2
+public class StorageApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderService.class, args);
+        SpringApplication.run(StorageApplication.class, args);
     }
 }

@@ -11,6 +11,7 @@
     <modules>
         <module>eureka</module>
         <module>OrderService</module>
+        <module>storageservice</module>
     </modules>
 
     <parent>
