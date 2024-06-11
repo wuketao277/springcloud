@@ -21,7 +21,7 @@ eureka:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:81/eureka/
+    service-url.defaultZone: http://localhost:83/eureka/
 
 ---
 spring.profiles: s2
@@ -35,7 +35,7 @@ eureka:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:81/eureka/
+    service-url.defaultZone: http://localhost:83/eureka/
 
 ---
 spring.profiles: s3
@@ -49,4 +49,4 @@ eureka:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:81/eureka/
+    service-url.defaultZone: http://localhost:83/eureka/
