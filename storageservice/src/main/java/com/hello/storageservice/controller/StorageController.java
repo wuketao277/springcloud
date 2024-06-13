@@ -3,6 +3,7 @@ package com.hello.storageservice.controller;
 import com.hello.storageservice.feign.OrderFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2024/6/7
  * @Description
  */
-@RestController("storage")
+@RestController
+@RequestMapping("storage")
 public class StorageController {
     @Autowired
     private OrderFeign orderFeign;
@@ -21,8 +23,7 @@ public class StorageController {
     }
 
     @GetMapping("getMsg")
-    public String getMsg(){
+    public String getMsg() {
         return orderFeign.getMsg();
     }
-
 }
