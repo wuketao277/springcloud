@@ -8,7 +8,11 @@ eureka:
   client:
     #服务注册中心的配置内容，指定服务注册中心的位置
     service-url.defaultZone: http://localhost:81/eureka/
-
+logging:
+  level:
+    root: info
+  config:
+    classpath: log4j2.xml
 ---
 spring.profiles: s1
 spring:
@@ -21,7 +25,7 @@ eureka:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:83/eureka/
+    service-url.defaultZone: http://localhost:81/eureka/
 
 ---
 spring.profiles: s2
@@ -35,7 +39,7 @@ eureka:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:83/eureka/
+    service-url.defaultZone: http://localhost:81/eureka/
 
 ---
 spring.profiles: s3
@@ -49,4 +53,4 @@ eureka:
     hostname: localhost
   client:
     #将当前eureka实例注册到另外一个eureka实例中
-    service-url.defaultZone: http://localhost:83/eureka/
+    service-url.defaultZone: http://localhost:81/eureka/
