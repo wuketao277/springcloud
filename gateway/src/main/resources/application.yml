@@ -1,0 +1,56 @@
+server:
+  port: 80
+spring:
+  # 配置应用实例在eureka中的名称
+  application:
+    name: gateway
+  # 为限流器配合的redis
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 允许gateway自动识别eureka中注册的应用
+          lowerCaseServiceId: true # 允许通过小写方式访问服务
+      routes:
+      - id: uam
+        # lb代表从注册中心获取服务，且以负载均衡方式转发
+        uri: lb://uam
+        order: 0
+        #网关断言匹配
+        predicates:
+        - Path=/uam/**
+        filters:
+        #熔断过滤器
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/defaultfallback
+        # 去掉路径前缀
+        - StripPrefix=1
+        #redis限流器
+        - name: RequestRateLimiter
+          args:
+            key-resolver: '#{@remoteAddKeyResolver}'
+            # 每秒最大访问次数（放令牌桶的速率）
+            redis-rate-limiter.replenishRate: 10
+            # 令牌桶最大容量（令牌桶的大小）
+            redis-rate-limiter.burstCapacity: 10
+#熔断器配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 3000
+  shareSecurityContext: true
+# 配置eureka服务端地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:81/eureka/
