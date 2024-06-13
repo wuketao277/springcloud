@@ -16,8 +16,13 @@ public class StorageController {
     private OrderFeign orderFeign;
 
     @GetMapping("getStorage")
-    public String getStorage() {
-        return orderFeign.getOrder();
+    public String getStorage(String id) {
+        return orderFeign.getOrder(id);
+    }
+
+    @GetMapping("getMsg")
+    public String getMsg(){
+        return orderFeign.getMsg();
     }
 
 }
