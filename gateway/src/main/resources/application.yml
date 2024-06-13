@@ -16,13 +16,13 @@ spring:
           enabled: true # 允许gateway自动识别eureka中注册的应用
           lowerCaseServiceId: true # 允许通过小写方式访问服务
       routes:
-      - id: uam
+      - id: order
         # lb代表从注册中心获取服务，且以负载均衡方式转发
-        uri: lb://uam
+        uri: lb://order
         order: 0
         #网关断言匹配
         predicates:
-        - Path=/uam/**
+        - Path=/order/**
         filters:
         #熔断过滤器
         - name: Hystrix
@@ -36,9 +36,9 @@ spring:
           args:
             key-resolver: '#{@remoteAddKeyResolver}'
             # 每秒最大访问次数（放令牌桶的速率）
-            redis-rate-limiter.replenishRate: 10
+            redis-rate-limiter.replenishRate: 1
             # 令牌桶最大容量（令牌桶的大小）
-            redis-rate-limiter.burstCapacity: 10
+            redis-rate-limiter.burstCapacity: 1
 #熔断器配置
 hystrix:
   command:
