@@ -13,6 +13,7 @@
         <module>OrderService</module>
         <module>storageservice</module>
         <module>gateway</module>
+        <module>elasticsearchclient</module>
     </modules>
 
     <parent>
