@@ -11,6 +11,8 @@
         <module name="eureka" />
         <module name="gateway" />
         <module name="orderservice" />
+        <module name="socketclient" />
+        <module name="socketserver" />
         <module name="storageservice" />
       </profile>
     </annotationProcessing>

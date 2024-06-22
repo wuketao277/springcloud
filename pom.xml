@@ -14,6 +14,8 @@
         <module>storageservice</module>
         <module>gateway</module>
         <module>elasticsearchclient</module>
+        <module>socketclient</module>
+        <module>socketserver</module>
     </modules>
 
     <parent>
