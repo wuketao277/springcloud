@@ -29,10 +29,7 @@ public class ServerSocketDemo extends Thread {
         while (true) {
             try {
                 Socket server = serverSocket.accept();
-                System.out.println("服务端接收到客户端请求");
-                //彩蛋
-                //server.setSoTimeout(5);
-                //彩蛋
+                System.out.println("服务端接收到客户端请求，服务端线程id:" + Thread.currentThread().getId());
 
                 //当服务端监听到客户端的连接后才会执行以下代码
                 System.out.println("客户端地址：" + server.getRemoteSocketAddress());
