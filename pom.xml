@@ -16,6 +16,8 @@
         <module>elasticsearchclient</module>
         <module>socketclient</module>
         <module>socketserver</module>
+        <module>niosocketserver</module>
+        <module>niosocketclient</module>
     </modules>
 
     <parent>

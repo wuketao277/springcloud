@@ -10,7 +10,10 @@
         <module name="elasticsearchclient" />
         <module name="eureka" />
         <module name="gateway" />
+        <module name="niosocketclient" />
+        <module name="niosocketserver" />
         <module name="orderservice" />
+        <module name="OrderService" />
         <module name="socketclient" />
         <module name="socketserver" />
         <module name="storageservice" />

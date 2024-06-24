@@ -50,8 +50,6 @@ public class ServerSocketDemo extends Thread {
                 e.printStackTrace();
 //                break;
             }
-
-
         }
     }
 
