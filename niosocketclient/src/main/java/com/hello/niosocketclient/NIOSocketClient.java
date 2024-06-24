@@ -36,7 +36,7 @@ public class NIOSocketClient {
                 channel = SocketChannel.open();
                 // 设置非阻塞模式，read的时候就不再阻塞
                 channel.configureBlocking(false);
-// tcp连接网络
+                // tcp连接网络
                 channel.connect(new InetSocketAddress("127.0.0.1", 9595));
 
                 // 创建Selector选择器
@@ -63,7 +63,7 @@ public class NIOSocketClient {
                                 //System.out.println("准备写：" + serializable);
                                 ByteBuffer byteBuffer = StandardCharsets.UTF_8.encode(serializable);
                                 socketChannel.write(byteBuffer);
-//附加参数
+                                //附加参数
                                 key.attach(serializable);
                                 // 切换读操作 , 以进行下一次的接口请求，即下一次读操作
                                 key.interestOps(SelectionKey.OP_READ);

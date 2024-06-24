@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56613f05-e19c-4c0f-b1e2-71cf1722d328" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/niosocketclient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/niosocketclient/src/main/java/com/hello/niosocketclient/NIOSocketClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/niosocketserver/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socketserver/src/main/java/com/hello/socketserver/ServerSocketDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/socketserver/src/main/java/com/hello/socketserver/ServerSocketDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springcloud.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/niosocketclient/src/main/java/com/hello/niosocketclient/NIOSocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/niosocketclient/src/main/java/com/hello/niosocketclient/NIOSocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,16 +68,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="27" />
-          <entry key="java" value="3671" />
-          <entry key="txt" value="86" />
+          <entry key="java" value="3683" />
+          <entry key="txt" value="96" />
           <entry key="xml" value="698" />
           <entry key="yml" value="670" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3671" />
-          <entry key="PLAIN_TEXT" value="113" />
+          <entry key="JAVA" value="3683" />
+          <entry key="PLAIN_TEXT" value="123" />
           <entry key="XML" value="698" />
           <entry key="YAML" value="670" />
         </counts>
@@ -98,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="76" column="68" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="68" />
+            <state relative-caret-position="311">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,25 +101,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/niosocketclient/src/main/java/com/hello/niosocketclient/NIOSocketClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="102" selection-end-line="115" />
+            <state relative-caret-position="531">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#866#867#0" expanded="true" />
                 <element signature="e#906#907#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/nio/charset/Charset.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="861" selection-start-line="861" selection-end-line="861" />
-              <folding>
-                <element signature="e#33709#33710#0" expanded="true" />
-                <element signature="e#33760#33761#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,6 +134,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -337,45 +316,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="niosocketserver" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nio" type="462c0819:PsiDirectoryNode" />
-              <item name="charset" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -391,7 +331,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1719220032276" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1719222472613" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -399,7 +339,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -430,7 +370,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SocketDemo">
+  <component name="RunManager" selected="Application.NIOSocketClient">
+    <configuration name="NIOSocketClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hello.niosocketclient.NIOSocketClient" />
+      <module name="niosocketclient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hello.niosocketclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOSocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hello.niosocketserver.NIOSocketServer" />
+      <module name="niosocketserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hello.niosocketserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServerSocketDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hello.socketserver.ServerSocketDemo" />
       <module name="socketserver" />
@@ -495,9 +461,13 @@
     <list>
       <item itemvalue="Application.ServerSocketDemo" />
       <item itemvalue="Application.SocketDemo" />
+      <item itemvalue="Application.NIOSocketServer" />
+      <item itemvalue="Application.NIOSocketClient" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NIOSocketClient" />
+        <item itemvalue="Application.NIOSocketServer" />
         <item itemvalue="Application.SocketDemo" />
         <item itemvalue="Application.ServerSocketDemo" />
       </list>
@@ -663,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719212882293</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="新增NIO项目">
+      <created>1719220096137</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719220096138</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -682,7 +659,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2167382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13519314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -699,7 +676,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961586" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32961586" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.37546468" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3746988" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32961586" />
       <window_info anchor="bottom" id="SonarLint" order="11" />
@@ -778,7 +755,8 @@
     <MESSAGE value="增加elasticsearchclient项目" />
     <MESSAGE value="完成socket项目" />
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="新增NIO项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增NIO项目" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1185,16 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="76" column="68" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/nio/charset/Charset.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -1206,10 +1174,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/niosocketclient/src/main/java/com/hello/niosocketclient/NIOSocketClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="102" selection-end-line="115" />
+        <state relative-caret-position="531">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#866#867#0" expanded="true" />

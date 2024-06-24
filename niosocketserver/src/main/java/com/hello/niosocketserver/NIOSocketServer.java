@@ -13,7 +13,6 @@ import java.util.Set;
 public class NIOSocketServer {
     public static void main(String[] args) {
         try {
-
             ServerSocketChannel channel = null;
             Selector selector = null;
             try {
