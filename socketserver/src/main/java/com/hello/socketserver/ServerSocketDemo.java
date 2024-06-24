@@ -28,20 +28,20 @@ public class ServerSocketDemo extends Thread {
     public void run() {
         while (true) {
             try {
-                Socket server = serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("服务端接收到客户端请求，服务端线程id:" + Thread.currentThread().getId());
 
                 //当服务端监听到客户端的连接后才会执行以下代码
-                System.out.println("客户端地址：" + server.getRemoteSocketAddress());
+                System.out.println("客户端地址：" + socket.getRemoteSocketAddress());
 
                 //监听来自客户端的消息
-                DataInputStream dis = new DataInputStream(server.getInputStream());
+                DataInputStream dis = new DataInputStream(socket.getInputStream());
                 System.out.println("客户端发送信息：" + dis.readUTF());
 
                 //通过socket向客户端发送信息
-                DataOutputStream dos = new DataOutputStream(server.getOutputStream());
-                dos.writeUTF("我是服务端，您已连接到：" + server.getLocalSocketAddress());
-                server.close();
+                DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
+                dos.writeUTF("我是服务端，您已连接到：" + socket.getLocalSocketAddress());
+                socket.close();
                 System.out.println("-------------------------------");
             } catch (SocketTimeoutException e) {
                 System.out.println("20s内无客户端连接，正在关闭服务端监听服务");
