@@ -17,6 +17,11 @@ public class StorageController {
     @Autowired
     private OrderFeign orderFeign;
 
+    @GetMapping("getStorageAddress")
+    public String getStorageAddress() {
+        return "上海市浦东新区";
+    }
+
     @GetMapping("getStorage")
     public String getStorage(String id) {
         return orderFeign.getOrder(id);

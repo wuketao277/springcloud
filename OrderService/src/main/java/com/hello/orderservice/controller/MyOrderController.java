@@ -1,5 +1,6 @@
 package com.hello.orderservice.controller;
 
+import com.hello.orderservice.feign.StorageFeign;
 import com.hello.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,14 +20,21 @@ import java.util.concurrent.TimeUnit;
 public class MyOrderController {
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private StorageFeign storageFeign;
 
     @GetMapping("getMsg")
-    public String getMsg(){
+    public String getMsg() {
         return orderService.getMsg();
     }
 
     @GetMapping("getOrder")
-    public String getOrder(String id){
+    public String getOrder(String id) {
         return orderService.getOrder(id);
+    }
+
+    @GetMapping("getStorageAddress")
+    public String getStorageAddress() {
+        return storageFeign.getStorageAddress();
     }
 }
