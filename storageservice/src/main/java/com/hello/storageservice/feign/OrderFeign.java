@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Description
  */
 @Component
-@FeignClient(value = "ORDER")
+@FeignClient(name = "ORDER", fallback = OrderFeignFallback.class)
 public interface OrderFeign {
-    @GetMapping("/getOrder")
+    @GetMapping("/order/getOrder")
     String getOrder(@RequestParam("id") String id);
 
-    @GetMapping("/getMsg")
+    @GetMapping("/order/getMsg")
     String getMsg();
 }

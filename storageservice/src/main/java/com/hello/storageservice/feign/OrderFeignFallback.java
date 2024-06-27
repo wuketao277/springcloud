@@ -2,15 +2,18 @@ package com.hello.storageservice.feign;
 
 import org.springframework.stereotype.Component;
 
-//@Component
-public class OrderFeignFallback {
-//    @Override
-//    public String getOrder(String id) {
-//        return "0000";
-//    }
-//
-//    @Override
-//    public String getMsg() {
-//        return "订单服务调用失败";
-//    }
+/**
+ * 降级处理类
+ */
+@Component
+public class OrderFeignFallback implements OrderFeign {
+    @Override
+    public String getOrder(String id) {
+        return id + "降级处理";
+    }
+
+    @Override
+    public String getMsg() {
+        return "降级处理";
+    }
 }
