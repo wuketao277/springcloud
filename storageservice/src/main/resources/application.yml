@@ -15,6 +15,7 @@ logging:
     classpath: log4j2.xml
 feign:
   hystrix:
+    # 启动feign下的hystrix，FeignClient中的服务降级才有效。
     enabled: true
 ---
 spring.profiles: s1

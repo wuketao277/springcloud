@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.math.BigDecimal;
 import java.util.concurrent.TimeUnit;
 
@@ -25,6 +27,18 @@ public class MyOrderController {
 
     @GetMapping("getMsg")
     public String getMsg() {
+        for (int i = 0; i < 100; i++) {
+            for (int j = 0; j < 3000; j++) {
+                try {
+                    FileWriter writer = new FileWriter("/Users/wuketao/Downloads", true);
+                    BufferedWriter bufferedWriter = new BufferedWriter(writer);
+                    bufferedWriter.write(".");
+                    bufferedWriter.close();
+                    writer.close();
+                } catch (Exception e) {
+                }
+            }
+        }
         return orderService.getMsg();
     }
 

@@ -3,8 +3,11 @@ package com.hello.orderservice.feign;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient("STORAGE")
+/**
+ * 仓库服务的Feign接口
+ */
+@FeignClient(name = "STORAGE")
 public interface StorageFeign {
-    @GetMapping("getStorageAddress")
+    @GetMapping("/storage/getStorageAddress")
     String getStorageAddress();
 }
