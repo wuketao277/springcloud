@@ -11,5 +11,6 @@
     <file url="file://$PROJECT_DIR$/socketclient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socketserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storageservice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/websocket" charset="UTF-8" />
   </component>
 </project>

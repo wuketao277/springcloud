@@ -17,6 +17,7 @@
         <module name="socketclient" />
         <module name="socketserver" />
         <module name="storageservice" />
+        <module name="websocket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

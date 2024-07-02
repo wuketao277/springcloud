@@ -18,6 +18,7 @@
         <module>socketserver</module>
         <module>niosocketserver</module>
         <module>niosocketclient</module>
+        <module>websocket</module>
     </modules>
 
     <parent>
