@@ -16,6 +16,7 @@ public class MySchedule {
 
     @Scheduled(cron = "0 * * * * *")
     public void printTime() {
+        // 定时任务向Redis中的list中push令牌。通过push令牌的速率限制请求数量。
         log.info("定时任务");
     }
 }

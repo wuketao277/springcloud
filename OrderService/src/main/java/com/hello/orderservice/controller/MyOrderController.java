@@ -27,18 +27,18 @@ public class MyOrderController {
 
     @GetMapping("getMsg")
     public String getMsg() {
-        for (int i = 0; i < 100; i++) {
-            for (int j = 0; j < 3000; j++) {
-                try {
-                    FileWriter writer = new FileWriter("/Users/wuketao/Downloads", true);
-                    BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                    bufferedWriter.write(".");
-                    bufferedWriter.close();
-                    writer.close();
-                } catch (Exception e) {
-                }
-            }
-        }
+//        for (int i = 0; i < 100; i++) {
+//            for (int j = 0; j < 3000; j++) {
+//                try {
+//                    FileWriter writer = new FileWriter("/Users/wuketao/Downloads", true);
+//                    BufferedWriter bufferedWriter = new BufferedWriter(writer);
+//                    bufferedWriter.write(".");
+//                    bufferedWriter.close();
+//                    writer.close();
+//                } catch (Exception e) {
+//                }
+//            }
+//        }
         return orderService.getMsg();
     }
 
