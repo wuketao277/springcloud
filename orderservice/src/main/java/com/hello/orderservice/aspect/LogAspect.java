@@ -18,6 +18,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import java.util.UUID;
 
 /**
+ * 日志切片
+ *
  * @author wuketao
  * @date 2024/6/12
  * @Description
@@ -33,8 +35,6 @@ public class LogAspect {
 
     @Around("controllerPointcut()")
     public Object doAround(ProceedingJoinPoint pjp) throws Throwable {
-        //
-        dealWithTraceId();
         // 获得类名称
         String className = pjp.getTarget().getClass().getSimpleName();
         // 获得方法名称
@@ -51,18 +51,5 @@ public class LogAspect {
         // 打印方法调用结果
         log.info("方法名：{} 返回值：{}", className + "." + methodName, JSONObject.toJSONString(retVal));
         return retVal;
-    }
-
-    /**
-     * 处理traceId
-     */
-    private void dealWithTraceId() {
-        // 首先判断线程环境中是否已经包含“traceId”，如果不存在才进行添加。
-        if (!ThreadContext.containsKey("traceId")) {
-            // 优先从请求head中获取，如果head中没有，就自动生成一个.
-            ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-            String traceId = attributes.getRequest().getHeader("TraceId");
-            ThreadContext.put("traceId", Strings.isNullOrEmpty(traceId) ? "traceId-" + UUID.randomUUID().toString() : traceId);
-        }
     }
 }

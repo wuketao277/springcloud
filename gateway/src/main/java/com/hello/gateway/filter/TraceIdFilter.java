@@ -10,8 +10,12 @@ import org.springframework.core.Ordered;
 
 import java.util.UUID;
 
+/**
+ * 网关traceId过滤器，给请求头中增加TraceId.
+ */
 @Component
 public class TraceIdFilter implements GlobalFilter, Ordered {
+
     @Override
     public int getOrder() {
         // -1 is response write filter, must be called before that
@@ -20,12 +24,14 @@ public class TraceIdFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        String traceId = generateTraceId();
-        ServerHttpRequest request = exchange.getRequest().mutate()
-                .headers(headers -> headers.set("TraceId", traceId))
-                .build();
-        System.out.println("网关添加traceId " + traceId);
-        return chain.filter(exchange.mutate().request(request).build());
+        // 检查如果请求head中没有TraceId，就给head中添加一个。
+        ServerHttpRequest serverHttpRequest = exchange.getRequest();
+        if (!serverHttpRequest.getHeaders().containsKey("TraceId")) {
+            serverHttpRequest = exchange.getRequest().mutate()
+                    .headers(headers -> headers.set("TraceId", generateTraceId()))
+                    .build();
+        }
+        return chain.filter(exchange.mutate().request(serverHttpRequest).build());
     }
 
     private String generateTraceId() {
