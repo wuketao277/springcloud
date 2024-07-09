@@ -1,5 +1,6 @@
 package com.hello.storageservice.feign;
 
+import com.hello.storageservice.feign.config.FeignTraceIdConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Description
  */
 @Component
-@FeignClient(name = "ORDER",path = "/order", fallback = OrderFeignFallback.class)
+@FeignClient(name = "ORDER", path = "/order", fallback = OrderFeignFallback.class, configuration = FeignTraceIdConfig.class)
 public interface OrderFeign {
     @GetMapping("/getOrder")
     String getOrder(@RequestParam("id") String id);

@@ -29,6 +29,8 @@ public class StorageController {
 
     @GetMapping("getMsg")
     public String getMsg() {
-        return orderFeign.getMsg();
+        long id = Thread.currentThread().getId();
+        String s = orderFeign.getMsg();
+        return s;
     }
 }

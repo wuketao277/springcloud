@@ -1,13 +1,10 @@
-package com.hello.orderservice.Filter;
+package com.hello.orderservice.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.UUID;
 
 /**
  * 可以通过Filter设置限流

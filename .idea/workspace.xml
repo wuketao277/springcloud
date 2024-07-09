@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56613f05-e19c-4c0f-b1e2-71cf1722d328" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignHeaderInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignTraceIdConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/Filter/LimitFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/Filter/LimitFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/hello/orderservice/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,7 +38,7 @@
     <session id="-1489417848">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.17" value="1" />
@@ -51,35 +55,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="26" />
+          <entry key="class" value="31" />
           <entry key="gitignore" value="4" />
           <entry key="html" value="2" />
           <entry key="iml" value="2" />
-          <entry key="java" value="207" />
+          <entry key="java" value="231" />
           <entry key="log" value="2" />
           <entry key="pom" value="1" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="80" />
-          <entry key="yml" value="48" />
+          <entry key="xml" value="81" />
+          <entry key="yml" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="26" />
+          <entry key="CLASS" value="31" />
           <entry key="HTML" value="2" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="207" />
+          <entry key="JAVA" value="231" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="XML" value="81" />
-          <entry key="YAML" value="48" />
+          <entry key="XML" value="82" />
+          <entry key="YAML" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="34" />
+          <entry key="dummy" value="41" />
           <entry key="html" value="27" />
-          <entry key="java" value="5720" />
-          <entry key="txt" value="749" />
+          <entry key="java" value="6244" />
+          <entry key="txt" value="778" />
           <entry key="xml" value="710" />
           <entry key="yml" value="1139" />
         </counts>
@@ -87,8 +91,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="27" />
-          <entry key="JAVA" value="5720" />
-          <entry key="PLAIN_TEXT" value="783" />
+          <entry key="JAVA" value="6244" />
+          <entry key="PLAIN_TEXT" value="819" />
           <entry key="XML" value="710" />
           <entry key="YAML" value="1139" />
         </counts>
@@ -104,61 +108,61 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/LimitFilter.java">
+        <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignTraceIdConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="274">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/aspect/LogAspect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/aspect/LogAspect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java">
+        <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            <state relative-caret-position="286">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar!/org/springframework/stereotype/Component.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="220">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar!/org/springframework/context/annotation/Bean.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignHeaderInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,6 +195,13 @@
       <find>traceId-0c72d657-1216-4514-a02f-e3c47eb249dd</find>
       <find>traceId-5edca399-ca06-437b-9c2b-3c8949e55f90</find>
       <find>trace-123</find>
+      <find>bbbbbb</find>
+      <find>traceId-ea4d8e3c-72c7-435b-9c59-baa8a756eca3</find>
+      <find>traceId-7ca13712-c210-473c-9714-6468e7f7c001</find>
+      <find>traceId</find>
+      <find>traceId-0010a2ab-26d6-497b-bae8-722517a2baed</find>
+      <find>traceId-4e580915-872a-4e06-b374-f43d0844d087</find>
+      <find>traceId-ad8f4e46-9910-4369-baca-63761aa2020d</find>
     </findStrings>
     <replaceStrings>
       <replace>elasticsearchclient</replace>
@@ -216,13 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/GatewayApplication.java" />
-        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/OrderApplication.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/elasticsearchclient/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/elasticsearchclient/src/main/java/com/hello/elasticsearchclient/config/ElasticsearchConfiguration.java" />
-        <option value="$PROJECT_DIR$/elasticsearchclient/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/elasticsearchclient/src/main/java/com/hello/elasticsearchclient/ElasticSearchClientApplication.java" />
         <option value="$PROJECT_DIR$/elasticsearchclient/pom.xml" />
         <option value="$PROJECT_DIR$/elasticsearchclient/src/main/java/com/hello/elasticsearchclient/controller/ESController.java" />
         <option value="$PROJECT_DIR$/serversocketdemo/src/main/java/com/hello/serversocketdemo/Demon2.java" />
@@ -237,11 +241,9 @@
         <option value="$PROJECT_DIR$/socketserver/src/main/java/com/hello/socketserver/ServerSocketDemo.java" />
         <option value="$PROJECT_DIR$/niosocketserver/src/main/java/com/hello/niosocketserver/NIOSocketServer.java" />
         <option value="$PROJECT_DIR$/niosocketclient/src/main/java/com/hello/niosocketclient/NIOSocketClient.java" />
-        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/controller/StorageController.java" />
         <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/feign/StorageFeign.java" />
         <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeignFallback.java" />
         <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/FeignConfig.java" />
-        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java" />
         <option value="$PROJECT_DIR$/storageservice/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/websocket/src/main/java/com/hello/websocket/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/websocket/src/main/java/com/hello/websocket/WebSocket.java" />
@@ -257,16 +259,25 @@
         <option value="$PROJECT_DIR$/websocket/src/main/java/com/hello/websocket/controller/TestController.java" />
         <option value="$PROJECT_DIR$/websocket/readMe.txt" />
         <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/schedule/MySchedule.java" />
-        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/LimitFilter.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/controller/MyOrderController.java" />
         <option value="$PROJECT_DIR$/orderservice/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/aspect/LogAspect.java" />
-        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java" />
         <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/aspect/LogAspect.java" />
+        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignClientConfig.java" />
+        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignConfig.java" />
+        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/controller/StorageController.java" />
+        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java" />
+        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/LimitFilter.java" />
+        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/TraceIdFilter.java" />
+        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/filter/TraceIdFilter.java" />
+        <option value="$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/filter/LimitFilter.java" />
         <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java" />
+        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignHeaderInterceptor.java" />
+        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignTraceIdConfig.java" />
+        <option value="$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java" />
       </list>
     </option>
   </component>
@@ -404,17 +415,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="orderservice" type="462c0819:PsiDirectoryNode" />
-              <item name="aspect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
-              <item name="orderservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orderservice" type="462c0819:PsiDirectoryNode" />
-              <item name="Filter" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
@@ -450,6 +451,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="storageservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="storageservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="storageservice" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="storageservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="storageservice" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
@@ -460,6 +482,115 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="storageservice" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="storageservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.github.openfeign:feign-core:9.7.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.github.openfeign:feign-core:9.7.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="feign-core-9.7.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.github.openfeign:feign-core:9.7.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="feign-core-9.7.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.github.openfeign:feign-hystrix:9.7.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.github.openfeign:feign-hystrix:9.7.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="feign-hystrix-9.7.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.github.openfeign:feign-hystrix:9.7.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="feign-hystrix-9.7.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.slf4j:slf4j-api:1.7.25" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.slf4j:slf4j-api:1.7.25" type="70bed36:NamedLibraryElementNode" />
+              <item name="slf4j-api-1.7.25.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.slf4j:slf4j-api:1.7.25" type="70bed36:NamedLibraryElementNode" />
+              <item name="slf4j-api-1.7.25.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="slf4j" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="stereotype" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -476,7 +607,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1720172769627" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1720191053305" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -548,7 +679,7 @@
       <module name="OrderService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hello.orderservice.*" />
+          <option name="PATTERN" value="com.hello.orderservice.filter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -591,10 +722,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StorageApplication" />
         <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.GatewayApplication" />
         <item itemvalue="Application.EurekaApplication" />
-        <item itemvalue="Application.StorageApplication" />
         <item itemvalue="Application.WebSocketApplication" />
       </list>
     </recent_temporary>
@@ -801,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720157670096</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="网关和业务应用的filer中添加traceid">
+      <created>1720172830783</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1720172830783</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -818,8 +956,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22031474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -829,9 +968,9 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="MyBatis Builder" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30963856" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3939759" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3939759" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961586" />
@@ -920,7 +1059,8 @@
     <MESSAGE value="测试FeignClient" />
     <MESSAGE value="新增WebSocket项目" />
     <MESSAGE value="从gateway进入的增加traceId" />
-    <option name="LAST_COMMIT_MESSAGE" value="从gateway进入的增加traceId" />
+    <MESSAGE value="网关和业务应用的filer中添加traceid" />
+    <option name="LAST_COMMIT_MESSAGE" value="网关和业务应用的filer中添加traceid" />
   </component>
   <component name="WindowStateProjectService">
     <state width="410" height="560" key="Git.Branch.Popup" />
@@ -931,16 +1071,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java</url>
+          <url>file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignHeaderInterceptor.java</url>
           <line>28</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java</url>
+          <line>45</line>
           <properties />
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -950,6 +1090,16 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ThreadContext</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>traceId</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>var4</expression-string>
         <language-id>JAVA</language-id>
@@ -973,119 +1123,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-core/9.7.0/feign-core-9.7.0.jar!/feign/FeignException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/controller/StorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE.jar!/org/springframework/cloud/openfeign/FeignClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2257">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/feign/StorageFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.7.0/feign-hystrix-9.7.0.jar!/feign/hystrix/HystrixFeign.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.7.0/feign-hystrix-9.7.0-sources.jar!/feign/hystrix/HystrixFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientsConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeignFallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/bind/annotation/GetMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/FeignConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/websocket/src/main/java/com/hello/websocket.java" />
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/StorageApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storageservice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1269,40 +1307,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/LimitFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/aspect/LogAspect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/Filter/TraceIdFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,10 +1321,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeignFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.7.0/feign-hystrix-9.7.0-sources.jar!/feign/hystrix/HystrixFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="206" column="19" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-core/9.7.0/feign-core-9.7.0.jar!/feign/RequestTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="368" column="27" selection-start-line="368" selection-start-column="27" selection-end-line="368" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/StorageApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/controller/StorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/hello/gateway/filter/TraceIdFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.16/tomcat-embed-core-9.0.16.jar!/javax/servlet/http/HttpServletResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/filter/LimitFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orderservice/src/main/java/com/hello/orderservice/filter/TraceIdFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/filter/TraceIdFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/MDC.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignHeaderInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar!/org/springframework/context/annotation/Bean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/config/FeignTraceIdConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar!/org/springframework/stereotype/Component.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storageservice/src/main/java/com/hello/storageservice/feign/OrderFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
