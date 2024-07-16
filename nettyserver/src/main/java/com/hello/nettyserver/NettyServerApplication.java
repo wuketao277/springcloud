@@ -5,7 +5,6 @@ package com.hello.nettyserver;
  */
 public class NettyServerApplication {
 
-
     public static void main(String[] args) {
         try {
             new NettyServer(7888).run();

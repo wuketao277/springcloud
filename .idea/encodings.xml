@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/elasticsearchclient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyclient" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/niosocketclient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/niosocketserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/orderservice" charset="UTF-8" />

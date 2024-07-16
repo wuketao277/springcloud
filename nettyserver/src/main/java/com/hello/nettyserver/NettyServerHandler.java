@@ -73,17 +73,21 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<String> {
         System.out.println("移除通道" + channel.hashCode() + ",当前通道总数：" + channels.size());
     }
 
+    /**
+     * 消息处理方法
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         //获取当前通道channel
         Channel channel = ctx.channel();
-        //这时我们遍历channels,根据不同的情况，返回不同的不同消息
+        //服务端收到消息后，遍历所有channels。发送此条消息的channel不用做任何处理，其他channel写入此消息。
         channels.forEach(c -> {
-            if (channel != c) {//不是当前的channel，直接打印消息
+            if (channel != c) {
                 //把当前通道的消息转发给其他通道了
-                c.writeAndFlush("[客户]" + channel.remoteAddress() + "在 【" + sdf.format(new Date()) + "】 发送了消息:" + msg + " \n");
-            } else {
-                c.writeAndFlush("【自己】在 【" + sdf.format(new Date()) + "】 发送了消息" + msg + "\n");
+                c.writeAndFlush(msg + " \n");
             }
         });
     }

@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class NettyClient {
     private final String host;
     private final int port;
+    private String nickName = "匿名";
 
     public NettyClient(String host, int port) {
         this.host = host;
@@ -48,15 +49,24 @@ public class NettyClient {
 
             if (channelFuture.isSuccess()) {
                 System.out.println("本地ip:" + channel.localAddress() + ",连接服务器ip: " + channel.remoteAddress() + " 成功");
-            }
 
-            Scanner scanner = new Scanner(System.in);
-            while (scanner.hasNextLine()) {
-                channel.writeAndFlush(scanner.nextLine());
-            }
+                // 无线循环监听客户端输入，将输入发送给服务器
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("请先设置昵称：");
+                this.nickName = scanner.nextLine();
+                System.out.println("您的昵称是" + this.nickName);
+                System.out.println("说点什么？");
+                // 发送消息
+                while (scanner.hasNextLine()) {
+                    channel.writeAndFlush(this.nickName + ":" + scanner.nextLine());
+                    System.out.println("说点什么？");
+                }
 
-            //给关闭监听进行通道
-            channel.closeFuture().sync();
+                //给关闭监听进行通道
+                channel.closeFuture().sync();
+            } else {
+                System.out.println("本地ip:" + channel.localAddress() + ",连接服务器ip: " + channel.remoteAddress() + " 失败");
+            }
 
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
