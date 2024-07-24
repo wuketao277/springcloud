@@ -6,3 +6,5 @@ elasticsearch:
   connTimeout: 3000
   socketTimeout: 5000
   connectionRequestTimeout: 500
+server:
+  port: 80
